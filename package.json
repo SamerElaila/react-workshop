@@ -1,0 +1,41 @@
+{
+  "name": "react-wrokshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamerElaila/react-wrokshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamerElaila/react-wrokshop/issues"
+  },
+  "homepage": "https://github.com/SamerElaila/react-wrokshop#readme",
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "babel-loader": "^7.1.2",
+    "file-loader": "^1.1.5",
+    "babel-eslint": "^8.0.2",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-cli": "^6.26.0",
+    "css-loader": "^0.28.7",
+    "babel-core": "^6.26.0",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.5.1",
+    "eslint": "^4.12.0"
+  }
+}
