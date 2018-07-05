@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Search from './Search';
-import Images from './Images';
+import Users from './Users';
 
 const reduce = data => data.map(el => el.previewURL);
 
@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <div>
         <Search />
-        <Images data={data} />
+        <Users />
       </div>
     );
   }
