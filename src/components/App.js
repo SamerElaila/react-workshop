@@ -10,17 +10,20 @@ class App extends Component {
     super();
 
     this.state = {
-      data: []
+      users: []
     };
+
+    this.getUser = this.getUser.bind(this);
   }
 
-  componentDidMount() {
+  getUser(user) {
     fetch(
-      'https://pixabay.com/api/?username=mjweaver01&key=1631539-db8210cabd2636c6df59812df&q='
+      `https://api.github.com/users/${user}?access_token=ccf13c4f87c213515127fdb3599428ca661192fb`
     )
       .then(res => res.json())
-      .then(result => {
-        this.setState({ data: reduce(result.hits) });
+      .then(user => {
+        console.log(user);
+        this.setState({ users: [...this.state.users, user] });
       })
       .catch(err => {
         console.log(err);
@@ -28,12 +31,15 @@ class App extends Component {
   }
 
   render() {
-    const { data } = this.state;
-
+    const {
+      getUser,
+      state: { users }
+    } = this;
+    console.log(this.state.users, 'users');
     return (
       <div>
-        <Search />
-        <Users />
+        <Search getUser={getUser} />
+        <Users users={users} />
       </div>
     );
   }

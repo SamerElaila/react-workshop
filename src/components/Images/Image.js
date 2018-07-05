@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Image = props => <img src={props.url} />;
+import './styles.css';
+
+const Image = props => <img className="img" src={props.url} />;
 
 Image.propTypes = {
-  url: PropTypes.string.isRequired
+  url: PropTypes.string
 };
 
 export default Image;
